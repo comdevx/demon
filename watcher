@@ -5,9 +5,18 @@ DELIMITER='\033[0m'
 
 LAST_CHANGE=$(sha1sum $1)
 
+args=("$@")
+len=${#args[@]}
+options=""
+
+for (( c=1; c<=len; c++ ))
+do
+   options="${options} ${c}"
+done
+
 printf "${COLOR}[$(date +%H:%M:%S)] Compiling file $1 using deno ${DELIMITER}\n\n"
 
-deno $1
+deno $1 $options
 
 printf "\n"
 
@@ -20,7 +29,7 @@ do
 
     printf "${COLOR}[$(date +%H:%M:%S)] Compiling file $1 using deno ${DELIMITER}\n\n"
 
-    deno $1
+    deno $1 $options
 
     printf "\n"
 
