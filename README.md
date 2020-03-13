@@ -1,10 +1,6 @@
-# Dewatch
+# Demon
 
 Watch & compile typescript file using deno with bash script — Learn Deno
-
-![Demo](./demo.gif)
-
-> Currently tested only on OSX 10.12.6
 
 ### Prepare
 
@@ -19,13 +15,14 @@ $ brew install md5sha1sum
 1. Download bash script file
 
 ```
-git clone https://github.com/muhibbudins/deno-watcher.git && mv deno-watcher/watcher /usr/local/bin/dewatch && chmod +x /usr/local/bin/dewatch && rm -rf deno-watcher
+git clone https://github.com/comdevx/demon.git && mv demon/demon /usr/local/bin/demon && chmod +x /usr/local/bin/demon && rm -rf demon
 ```
 
-2. Run **dewatch** using this command :
+2. Run **demon** using this command :
 
 ```
-$ dewatch <your file>
+$ demon <your file> <options>
+$ demon <your file> --allow-net
 ```
 
 ### Related
